@@ -1,0 +1,19 @@
+import time
+
+spellings = []
+mean = []
+title = input("단어장 제목을 입력하세요: ")
+print("지금부터 단어의 철자와 뜻을 각각 입력해주세요.")
+print("최대 50개까지 작성하실 수 있으며 'end'를 입력하시면 입력이 종료됩니다.")
+
+for i in range(50):
+    spelling = input("철자를 입력하세요: ")
+    if spelling.lower() == "end":  # 대소문자 구분 없이 "end"를 입력하면 입력 종료
+        break
+    mean_input = input("뜻을 입력하세요: ")
+    spellings.append(spelling)
+    mean.append(mean_input)
+
+with open(f"C:/Users/ggangseo/Desktop/englishwords/{title}.txt", mode='w') as f:
+    for k in range(len(spellings)):
+        f.write(f"{spellings[k]} {mean[k]}\n")
