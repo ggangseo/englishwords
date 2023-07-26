@@ -8,7 +8,7 @@ time.sleep(0.2)
 print("최대50개 까지 작성하실 수 있으시며 end를 입력시 50회 이전에 입력이 완료됩니다.")
 time.sleep(0.3)
 for i in range(0,50):
-    spellings.append(input("철자를입력하세요."))
+    spellings.append(input("철자를 입력하세요."))
     if spellings[i].lower() == "end":
         break
     mean.append(input("뜻을입력하세요:"))
